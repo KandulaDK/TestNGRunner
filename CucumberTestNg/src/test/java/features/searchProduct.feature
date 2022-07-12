@@ -12,8 +12,8 @@ And check is both products are same or not
 Examples:
   |shortName|
 	|	Tom		|
-#	|	Car		|
-#	|	cau		|
+	|	Car		|
+	|	cau		|
 #	|	Wal		|
 #	| cas		|
 #	| bea		|

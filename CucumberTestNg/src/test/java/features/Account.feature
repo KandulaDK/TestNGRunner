@@ -1,13 +1,13 @@
-#@tag
-#Feature: Title of your feature
-  #I want to use this template for my feature file
-#
-  #@tag1
-  #Scenario: Login to instagram Page
-    #Given User is on Insta login page
-    #When User enters username "dinesh" and password "issue rasied"
-    #Then home page should be displayed
-    #And  prints the tittle of the page
+@tag
+Feature: Title of your feature
+  I want to use this template for my feature file
+
+  @tag1
+  Scenario: Login to instagram Page
+    Given User is on Insta login page
+    When User enters username "dinesh" and password "issue rasied"
+    Then home page should be displayed
+    And  prints the tittle of the page
 #
 #
   #@tag2

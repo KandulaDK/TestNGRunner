@@ -10,7 +10,7 @@ Feature: Search and Place the order of the product
     Examples: 
       | shortName |
       | Tom       |
-#	|	Car		|
+      | Car       |
 #	|	cau		|
 #	|	Wal		|
 #	| cas		|

@@ -3,7 +3,7 @@ package stepDefination;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import PicoContainer.DependencyInjection;
+import dependencyInjection.DependencyInjection;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -22,7 +22,7 @@ public class LandingPageStepDefination {
 		this.dependencyInjection = dependencyInjection;
 	}
 
-	@Given("User is on GreenCart Landing Page")
+	@Given("User is on GreenCart Landing Page^$")
 	public void user_is_on_greencart_landing_page() throws Throwable {
 //		WebDriverManager.chromedriver().setup();
 //		dependencyInjection.driver = new ChromeDriver();

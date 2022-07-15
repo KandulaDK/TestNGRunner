@@ -1,4 +1,4 @@
-package PicoContainer;
+package dependencyInjection;
 
 import java.util.Iterator;
 import java.util.Set;

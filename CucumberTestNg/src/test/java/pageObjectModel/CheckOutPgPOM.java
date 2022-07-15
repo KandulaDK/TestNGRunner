@@ -9,6 +9,7 @@ public class CheckOutPgPOM {
 	
 	public CheckOutPgPOM(WebDriver driver) {
 		this.driver = driver;
+	
 	}
 	
 	private By itemName = By.cssSelector("td p[class='product-name']");

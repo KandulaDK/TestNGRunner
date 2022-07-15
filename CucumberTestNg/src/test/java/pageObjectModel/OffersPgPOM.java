@@ -8,6 +8,7 @@ public class OffersPgPOM {
 	
 	public OffersPgPOM(WebDriver driver) {
 		this.driver = driver;
+	
 	}
 	
 	private By searchItem = By.id("search-field");

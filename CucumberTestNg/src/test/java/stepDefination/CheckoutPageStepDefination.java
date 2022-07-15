@@ -2,7 +2,7 @@ package stepDefination;
 
 import org.testng.Assert;
 
-import PicoContainer.DependencyInjection;
+import dependencyInjection.DependencyInjection;
 import io.cucumber.java.en.Then;
 import pageObjectModel.CheckOutPgPOM;
 

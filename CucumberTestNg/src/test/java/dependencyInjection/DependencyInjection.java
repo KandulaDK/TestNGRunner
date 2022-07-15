@@ -1,4 +1,4 @@
-package PicoContainer;
+package dependencyInjection;
 
 import java.io.IOException;
 
@@ -11,10 +11,11 @@ public class DependencyInjection {
 	public WebDriver driver;
  	public String landingPgProduct;
  	public String offerPgProduct;
-	public PageObjectManager pageObjectManager;
 	public TestBase testBase;
 	public GenricUtils genricUtils;
+	public PageObjectManager pageObjectManager;
 //	public SoftAssert a;
+	
 	
  	public DependencyInjection() throws IOException {
  		testBase = new TestBase();

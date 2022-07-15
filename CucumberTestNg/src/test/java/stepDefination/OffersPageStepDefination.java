@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-import PicoContainer.DependencyInjection;
+import dependencyInjection.DependencyInjection;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pageObjectModel.LandingPgPOM;

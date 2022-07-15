@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-07T10:11:51 IST" name="Default suite" finished-at="2022-07-07T10:12:07 IST" duration-ms="16016">
+  <suite started-at="2022-07-15T11:27:37 IST" name="Default suite" finished-at="2022-07-15T11:28:49 IST" duration-ms="72150">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner.TestRunner@663c9e7a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-07-07T10:11:51 IST" name="Default test" finished-at="2022-07-07T10:12:07 IST" duration-ms="16016">
+    <test started-at="2022-07-15T11:27:37 IST" name="Default test" finished-at="2022-07-15T11:28:49 IST" duration-ms="72150">
       <class name="TestNGTestRunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestNGTestRunner.TestRunner@663c9e7a]" started-at="2022-07-07T10:11:51 IST" name="setUpClass" finished-at="2022-07-07T10:11:53 IST" duration-ms="1719" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestNGTestRunner.TestRunner@663c9e7a]" started-at="2022-07-15T11:27:37 IST" name="setUpClass" finished-at="2022-07-15T11:27:39 IST" duration-ms="1338" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3f985a86]]>
+                <![CDATA[org.testng.TestRunner@51a8313b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner.TestRunner@663c9e7a]" started-at="2022-07-07T10:11:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T10:12:07 IST" duration-ms="13910" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner.TestRunner@663c9e7a]" started-at="2022-07-15T11:27:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-15T11:28:49 IST" duration-ms="70298" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,59 +34,58 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="io.cucumber.testng.UndefinedStepException">
             <message>
-              <![CDATA[expected [Cauliflower] but found [No data]]]>
+              <![CDATA[The step 'User is on GreenCart Landing Page' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User is on GreenCart Landing Page")
+public void user_is_on_green_cart_landing_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Cauliflower] but found [No data]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at stepDefination.OffersPageStepDefination.check_is_both_products_are_same_or_not(OffersPageStepDefination.java:54)
-at ✽.check is both products are same or not(file:///C:/Users/DinnuBunny/git/CUCUTestNG/CucumberTestNg/src/test/java/features/searchProduct.feature:9)
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'User is on GreenCart Landing Page' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User is on GreenCart Landing Page")
+public void user_is_on_green_cart_landing_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner.TestRunner@663c9e7a]" started-at="2022-07-07T10:11:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T10:12:07 IST" duration-ms="13786" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Search Experience for product search in both home and Offers Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Search and Place the order of the product"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner.TestRunner@663c9e7a]" started-at="2022-07-07T10:11:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T10:12:07 IST" duration-ms="13800" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Search Experience for product search in both home and Offers Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Search and Place the order of the product"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestNGTestRunner.TestRunner@663c9e7a]" started-at="2022-07-07T10:12:07 IST" name="tearDownClass" finished-at="2022-07-07T10:12:07 IST" duration-ms="316" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestNGTestRunner.TestRunner@663c9e7a]" started-at="2022-07-15T11:28:49 IST" name="tearDownClass" finished-at="2022-07-15T11:28:49 IST" duration-ms="459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

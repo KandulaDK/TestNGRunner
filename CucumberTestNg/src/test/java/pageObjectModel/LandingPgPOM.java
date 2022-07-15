@@ -30,9 +30,9 @@ public class LandingPgPOM {
 	}
 	
 	public String getTheProductName() {
-		
 		return driver.findElement(productName).getText();
 	}
+	
 	
 	public void goTOTopDealsPg() {
 		driver.findElement(topDeals).click();

@@ -12,6 +12,7 @@ public class CheckOutPgPOM {
 	
 	}
 	
+	
 	private By itemName = By.cssSelector("td p[class='product-name']");
 	private By quantity = By.cssSelector("td p[class='quantity']");
 	private By promoButton = By.cssSelector("button[class='promoBtn']");

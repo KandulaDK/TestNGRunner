@@ -12,7 +12,8 @@ import io.cucumber.testng.CucumberOptions;
 				"html:target/TestNGcucumber.html",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", 
 				"rerun:target/failed_scenarios.txt"},
-		tags= "@SearchProducts or @checkOut")
+		tags= "@checkOut")
+
 
 //step notification was not supported in testNG
 //for jUnit we have @RunWith(Cucumber.class)

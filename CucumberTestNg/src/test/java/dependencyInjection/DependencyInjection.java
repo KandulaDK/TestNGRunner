@@ -17,6 +17,7 @@ public class DependencyInjection {
 //	public SoftAssert a;
 	
 	
+	
  	public DependencyInjection() throws IOException {
  		testBase = new TestBase();
  		pageObjectManager = new PageObjectManager(testBase.WebDriverManger());

@@ -16,6 +16,7 @@ public class PageObjectManager {
 		return landingPg;
 	}
 	
+	
 	public OffersPgPOM getOffersPg() {
 		offersPg = new OffersPgPOM(driver);
 		return offersPg;

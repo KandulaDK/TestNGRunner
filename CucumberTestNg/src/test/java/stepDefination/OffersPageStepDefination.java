@@ -27,6 +27,7 @@ public class OffersPageStepDefination {
 		this.dependencyInjection = dependencyInjection;
 	}
 
+	
 	@Then("^User searched for same shortname (.+) in offers page$")
 	public void user_searched_for_same_shortname_in_offers_page(String shortName) throws Throwable {
 		

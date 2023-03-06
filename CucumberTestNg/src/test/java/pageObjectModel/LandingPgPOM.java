@@ -18,6 +18,7 @@ public class LandingPgPOM {
 	private By bag = By.cssSelector("[alt='Cart']");
 	private By checkOut = By.xpath("//button[.='PROCEED TO CHECKOUT']");
 
+	
 
 	public  LandingPgPOM(WebDriver driver) {
 		this.driver = driver;

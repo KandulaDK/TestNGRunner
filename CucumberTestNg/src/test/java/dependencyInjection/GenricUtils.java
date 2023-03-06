@@ -12,6 +12,7 @@ public class GenricUtils {
 		this.driver = driver;
 	}
 	
+	
 	public void switchWindowToChild() {
 		Set<String> activeWindows = driver.getWindowHandles();
 		Iterator<String> a = activeWindows.iterator();

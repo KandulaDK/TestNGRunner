@@ -5,7 +5,7 @@ Scenario Outline: Search Experience for product search in both home and Offers P
 
 Given User is on GreenCart Landing Page
 When User Searched with shortName <shortName> and Extracted resultes of the product
-And add "3" items of the searched product to cart
+And add "5" items of the searched product to cart
 Then User proceeds to checkout 
 And validate the items in the checkout page
 And verfiy user has ability enter promo code and place the order

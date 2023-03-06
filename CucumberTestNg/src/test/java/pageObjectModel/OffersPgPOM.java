@@ -18,6 +18,7 @@ public class OffersPgPOM {
 		driver.findElement(searchItem).sendKeys(shortName);
 	}
 	
+	
 	public String getTheProductName() {
 		return driver.findElement(productName).getText();
 	}

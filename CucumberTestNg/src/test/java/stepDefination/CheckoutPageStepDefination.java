@@ -15,6 +15,7 @@ public class CheckoutPageStepDefination {
 	    this.checkoutPg = dependencyInjection.pageObjectManager.getCheckoutPG();
 	}
 	
+	
 	@Then ("validate the items in the checkout page")
 	public void validate_the_items_in_the_checkout_page() throws InterruptedException {
 		Thread.sleep(5000);

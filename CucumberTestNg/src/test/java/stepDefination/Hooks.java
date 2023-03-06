@@ -20,11 +20,13 @@ public class Hooks {
 	public Hooks(DependencyInjection dependencyInjection) {
 		this.dependencyInjection = dependencyInjection;
 	}
+	
 
 	@Before
 	public void beforeValidation() {
 		System.out.println("      Before Validation done");
 	}
+	
 
 	@After
 	public void afterValidation() throws IOException {

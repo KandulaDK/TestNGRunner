@@ -1,26 +1,19 @@
 package dependencyInjection;
 
 import java.io.IOException;
+import java.util.HashMap;
 
-import org.openqa.selenium.WebDriver;
-import org.testng.asserts.SoftAssert;
-
+import driver.TestBase;
+import functionalLibrary.GenricUtils;
 import pageObjectModel.PageObjectManager;
 
-public class DependencyInjection {
-	public WebDriver driver;
- 	public String landingPgProduct;
- 	public String offerPgProduct;
-	public TestBase testBase;
-	public GenricUtils genricUtils;
+public class DependencyInjection extends TestBase{
+ 	public GenricUtils genricUtils;
 	public PageObjectManager pageObjectManager;
-//	public SoftAssert a;
-	
-	
+	public HashMap<String,String> testData = new HashMap<String,String>();
 	
  	public DependencyInjection() throws IOException {
- 		testBase = new TestBase();
- 		pageObjectManager = new PageObjectManager(testBase.WebDriverManger());
- 		genricUtils = new GenricUtils(testBase.WebDriverManger());
+ 		pageObjectManager = new PageObjectManager(WebDriverManger());
+ 		genricUtils = new GenricUtils(WebDriverManger());
  	}
 }

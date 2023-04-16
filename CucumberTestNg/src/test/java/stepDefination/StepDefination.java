@@ -1,5 +1,6 @@
 package stepDefination;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,7 +14,6 @@ public class StepDefination {
 		
 	}
 	
-
 	@When("User enters username {string} and password {string}")
 	public void user_enters_username_and_password(String string, String string2) {
 	    // Write code here that turns the phrase above into concrete actions
@@ -43,6 +43,12 @@ public class StepDefination {
 		System.out.println(name);
     }
 
+	@And("user click login")
+	public void user_click_login() {
+		
+	}
+	
+	
     @When("^I check for the (.+) in step$")
     public void i_check_for_the_in_step(String value) throws Throwable {
 //        throw new PendingException();

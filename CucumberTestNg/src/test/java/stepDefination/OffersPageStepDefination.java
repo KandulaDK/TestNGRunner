@@ -1,58 +1,38 @@
 package stepDefination;
 
-import java.util.Iterator;
-import java.util.Set;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
 
 import dependencyInjection.DependencyInjection;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import pageObjectModel.LandingPgPOM;
-import pageObjectModel.OffersPgPOM;
-import pageObjectModel.PageObjectManager;
+import pageObjectModel.LandingPage;
+import pageObjectModel.OffersPage;
 
 public class OffersPageStepDefination {
-	public WebDriver driver;
-	public String landingPgProduct;
-	public String offerPgProduct;
 	DependencyInjection dependencyInjection;
-//	public SoftAssert a;
-	public PageObjectManager pageObjectManager;
-
+	OffersPage offersPage;
+	LandingPage landingPage;
+	
 	public OffersPageStepDefination(DependencyInjection dependencyInjection) {
 		this.dependencyInjection = dependencyInjection;
+		this.offersPage = dependencyInjection.pageObjectManager.getOffersPage();
+		this.landingPage = dependencyInjection.pageObjectManager.getLandingPage();
 	}
 
-	
 	@Then("^User searched for same shortname (.+) in offers page$")
 	public void user_searched_for_same_shortname_in_offers_page(String shortName) throws Throwable {
-		
-//		pageObjectManager = new PageObjectManager(dependencyInjection.driver);
-		
-		LandingPgPOM landingPg = dependencyInjection.pageObjectManager.getLandingPg(); //pageObjectManager.getLandingPg();
-		OffersPgPOM offersPg = dependencyInjection.pageObjectManager.getOffersPg(); //pageObjectManager.getOffersPg();
-		
-		landingPg.goTOTopDealsPg();
-//		landingPg.switchToOffersPage();
+		landingPage.goTOTopDealsPg();
 		dependencyInjection.genricUtils.switchWindowToChild();
-		
-		
-		offersPg.searchItem(shortName);
+		offersPage.searchItem(shortName);
 		Thread.sleep(2000);
-		dependencyInjection.offerPgProduct = offersPg.getTheProductName();
-		
-		System.out.println("Offers page product is: " + dependencyInjection.offerPgProduct);
+		dependencyInjection.testData.put("offersPageProduct", offersPage.getTheProductName());
+		System.out.println("Offers page product is: " + dependencyInjection.testData.get("offersPageProduct"));
 	}
 	
 
 	@And("^check is both products are same or not$")
 	public void check_is_both_products_are_same_or_not() throws Throwable {
-//		dependencyInjection.a = new SoftAssert();
-		Assert.assertEquals(dependencyInjection.offerPgProduct, dependencyInjection.landingPgProduct.split(" ")[0].trim());
+		Assert.assertEquals(dependencyInjection.testData.get("offersPageProduct"), dependencyInjection.testData.get("landingPageProdcut").split("-")[0].trim());
 
 	}
 

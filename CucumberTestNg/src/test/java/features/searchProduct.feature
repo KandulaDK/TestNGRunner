@@ -9,10 +9,9 @@ Feature: Search and Place the order of the product
 
     Examples: 
       | shortName |
-      | Tom       |
       | Beet       |
-#	|	cau		|
-#	|	Wal		|
+	|	cau		|
+	|	Wal		|
 #	| cas		|
 #	| bea		|
 #	| ras		|

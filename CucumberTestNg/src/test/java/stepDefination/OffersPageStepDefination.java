@@ -1,5 +1,7 @@
 package stepDefination;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 import org.testng.Assert;
 
 import dependencyInjection.DependencyInjection;
@@ -9,6 +11,7 @@ import pageObjectModel.LandingPage;
 import pageObjectModel.OffersPage;
 
 public class OffersPageStepDefination {
+	private static Logger log = (Logger) LogManager.getLogger(OffersPageStepDefination.class.getName());
 	DependencyInjection dependencyInjection;
 	OffersPage offersPage;
 	LandingPage landingPage;
@@ -26,7 +29,7 @@ public class OffersPageStepDefination {
 		offersPage.searchItem(shortName);
 		Thread.sleep(2000);
 		dependencyInjection.testData.put("offersPageProduct", offersPage.getTheProductName());
-		System.out.println("Offers page product is: " + dependencyInjection.testData.get("offersPageProduct"));
+		log.info("Offers page product is: " + dependencyInjection.testData.get("offersPageProduct"));
 	}
 	
 

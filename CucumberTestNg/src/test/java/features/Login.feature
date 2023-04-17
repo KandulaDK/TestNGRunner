@@ -19,5 +19,4 @@ Feature: Instagram Login
       | name1 |     5 |	true	 |
       | name2 |     7 | false  |
       |dinesh |     22| success|
-      |Akshay |     26| Pass   |
-      |Srikanth|    50| Fail   |
+      
